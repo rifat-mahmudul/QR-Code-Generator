@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+
+    <!-- tailwindcss cdn link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+    </script>
+</head>
+<body class="bg-[#263031] flex flex-col justify-center items-center h-[100vh]">
+    
+    <div class="w-[90%] sm:w-[650px] justify-between sm:flex items-center p-5">
+        <div>
+            <img src="images/vecteezy_qr-code-vector-icon_.jpg" alt="" class="sm:w-[300px] w-[90%] mx-auto">
+        </div>
+    
+        <div class="text-center">
+            <h1 class="text-3xl font-bold text-gray-300">QR Code Generator</h1>
+            <input type="text" name="" id="qrInput" placeholder="Enter your text or url" class="sm:w-[300px] mt-4 mb-4 h-[35px] border-2 border-black bg-inherit font-semibold px-3 py-5 rounded-3xl text-white outline-none">
+
+            <button class="block bg-emerald-800 px-3 py-2 rounded-3xl font-bold hover:bg-emerald-900 transition-[0.5s] text-gray-400 mx-auto" onclick="generateQrCode()">Generate QR Code</button>
+
+            <h1 id="qrImage">
+                
+            </h1>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
